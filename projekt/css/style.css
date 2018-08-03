@@ -1,0 +1,17 @@
+.top-bar {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header-left {
+    background-color: blue;
+}
+
+.header-right {
+    background-color: red;
+}
