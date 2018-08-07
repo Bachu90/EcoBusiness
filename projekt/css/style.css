@@ -1,17 +1,85 @@
-.top-bar {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
+@font-face {
+    font-family: Tahoma;
+    src: url("../fonts/tahoma.ttf");
+}
+
+@font-face {
+    font-family: DINEngschrift;
+    src: url("../fonts/DINEngschriftStd.otf");
+}
+
+@font-face {
+    font-family: MyriadProBoldCondensed;
+    src: url("../fonts/MyriadPro-BoldCond.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: #282828; */
+    font-size: 10px;
+    font-family: Tahoma;
+}
+
+.wrapper {
+    max-width: 775px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 header {
+    background: linear-gradient(#292824, #494540);
+}
+
+.top-bar {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
+    height: 63px;
+    padding-left: 49px;
+    padding-right: 49px;
 }
 
-.header-left {
-    background-color: blue;
+.brand-logo h2 {
+    font-family: DINEngschrift;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #e9eef2;
+    font-weight: lighter;
 }
 
-.header-right {
-    background-color: red;
+.brand-logo h2 img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    height: 40px;
+    border-right: 1px solid #181714;
+    box-shadow: 1px 0px 0px #484641;
+}
+
+nav ul li:last-child {
+    border: none;
+    box-shadow: none;
+}
+
+nav ul li a {
+    font-family: MyriadProBoldCondensed;
+    font-size: 16px;
+    color: #e9eef2;
+    text-decoration: none;
+}
+
+.green {
+    color: #abb820;
+}
+
+.banner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
