@@ -13,15 +13,28 @@
     src: url("../fonts/MyriadPro-BoldCond.otf");
 }
 
+@font-face {
+    font-family: MyriadPro;
+    src: url("../fonts/MyriadPro-Regular.otf");
+}
+
+@font-face {
+    font-family: MyriadProLight;
+    src: url("../fonts/MyriadPro-Light.otf");
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-size: 10px;
 }
 
 body {
-    /*background-color: #282828;*/
-    font-size: 10px;
     font-family: Tahoma;
+}
+
+.green {
+    color: #abb820;
 }
 
 .wrapper {
@@ -51,9 +64,9 @@ header {
     align-self: center;
 }
 
-.brand-logo h2 {
+.brand-logo h3 {
     font-family: DINEngschrift;
-    font-size: 2rem;
+    font-size: 3rem;
     text-transform: uppercase;
     color: #e9eef2;
     font-weight: lighter;
@@ -62,22 +75,28 @@ header {
     align-self: center;
 }
 
+.brand-logo h3 span {
+    font-family: DINEngschrift;
+    font-size: 3rem;
+}
+
 .brand-logo img {
     width: 27px;
     height: 27px;
     margin-right: 8px;
 }
 
-nav {
+header nav {
     flex-basis: 395px;
 }
 
-nav ul {
+header nav ul {
     display: flex;
     width: 100%;
+    list-style-type: none;
 }
 
-nav ul li {
+header nav ul li {
     display: flex;
     width: 100%;
     align-items: flex-end;
@@ -87,20 +106,20 @@ nav ul li {
     box-shadow: 1px 0px 0px #484641;
 }
 
-nav ul li:last-child {
+header nav ul li:last-child {
     border: none;
     box-shadow: none;
 }
 
-nav ul li a {
+header nav ul li a {
     font-family: MyriadProBoldCondensed;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #e9eef2;
     text-decoration: none;
 
 }
 
-nav ul li a::after {
+header nav ul li a::after {
     content: "";
     display: block;
     width: 100%;
@@ -108,10 +127,6 @@ nav ul li a::after {
     background-color: #565553;
     position: relative;
     top: 23px;
-}
-
-.green {
-    color: #abb820;
 }
 
 .banner {
@@ -132,6 +147,77 @@ nav ul li a::after {
 .banner-right {
     width: 100%;
     background: url(../img/banner-bg.png) repeat;
+}
+
+hgroup {
+    position: relative;
+    top: 83px;
+    left: -40px;
+}
+
+h1 {
+    font-family: MyriadProLight;
+    font-size: 4.6rem;
+    font-weight: lighter;
+    color: #e7eada;
+    position: relative;
+    left: -28px;
+}
+
+h5 {
+    font-family: MyriadPro;
+    font-size: 24px;
+    color: #e7eada;
+    font-weight: 600;
+}
+
+h4 {
+    display: inline-block;
+    font-family: MyriadProLight;
+    font-size: 2.9rem;
+    font-weight: lighter;
+    color: #e7eada;
+    position: relative;
+    left: -5px;
+}
+
+h2 {
+    display: inline-block;
+    font-family: MyriadProLight;
+    font-size: 3.9rem;
+    font-weight: 100;
+    color: #d5e88e;
+    position: relative;
+    top: 10px;
+}
+
+button {
+    position: relative;
+    top: 100px;
+    left: 20px;
+    width: 140px;
+    height: 35px;
+    border: none;
+    border-radius: 7px;
+    background: linear-gradient(#494540, #292824);
+    font-family: MyriadPro;
+    font-size: 2rem;
+    color: #e7eada;
+}
+
+.button-arrow {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-image: url("../img/button-arrow.png");
+    position: relative;
+    left: -10px;
+    top: -1px;
+}
+
+button:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 section {
