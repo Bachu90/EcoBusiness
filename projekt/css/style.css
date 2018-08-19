@@ -24,6 +24,11 @@
 }
 
 @font-face {
+    font-family: MyriadProBold;
+    src: url("../fonts/MyriadPro-Bold.otf");
+}
+
+@font-face {
     font-family: MyriadProCondensed;
     src: url("../fonts/MyriadPro-Cond.otf");
 }
@@ -258,6 +263,194 @@ section {
     text-transform: uppercase;
     font-family: Arial;
     font-size: 1rem;
+    color: #cdcdcd;
+    border-top: 2px dotted #cdcdcd;
+    border-bottom: 2px dotted #cdcdcd;
+    padding: 7px 0;
+}
+
+#welcome div {
+    display: flex;
+    padding: 15px 0;
+    justify-content: space-between;
+}
+
+#welcome div p {
+    padding: 0 17px;
+    font-family: Tahoma;
+    font-size: 1.1rem;
+    color: #848484;
+}
+
+#welcome div p span {
+    font-family: Tahoma;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#welcome div p a,
+#welcome p.welcome-second {
+    font-family: Tahoma;
+    font-size: 1.1rem;
+    color: #848484;
+}
+
+#welcome p.welcome-second a {
+    font-family: Tahoma;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #000;
+}
+
+
+#services-overview h3,
+#green-solutions h3,
+#case-studies h3 {
+    border-bottom: 2px dotted #cdcdcd;
+}
+
+#services-overview h3::after,
+#green-solutions h3::after,
+#case-studies h3::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-image: url("../img/linearrow.png");
+    float: right;
+    position: relative;
+    top: 30px;
+}
+
+#services-overview p {
+    padding-top: 17px;
+    font-family: Tahoma;
+    font-size: 1.1rem;
+    color: #848484;
+}
+
+#services-overview p span {
+    font-family: Tahoma;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#services-overview > div {
+    display: flex;
+    padding-top: 12px;
+    justify-content: space-between;
+}
+
+#services-overview > div div ul {
+    padding: 17px 0;
+    list-style-type: none;
+    line-height: 19px;
+}
+
+#services-overview > div div ul li {
+    font-family: Tahoma;
+    font-size: 10px;
+}
+
+#services-overview > div div ul li::before {
+    content: "";
+    width: 9px;
+    height: 10px;
+    background-image: url("../img/arrow.png");
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-right: 4px;
+}
+
+#green-solutions > div {
+    padding-top: 17px;
+    display: grid;
+    grid-template-columns: 47% 47%;
+    justify-content: space-between;
+}
+
+#green-solutions > div div a {
+    display: block;
+    max-width: 60%;
+    font-family: Tahoma;
+    font-size: 1.0rem;
+    color: #848484;
+    line-height: 14px;
+}
+
+#green-solutions > div div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#green-solutions > div p {
+    font-family: Tahoma;
+    font-size: 1.1rem;
+    color: #848484;
+    margin-top: 10px;
+}
+
+#green-solutions > div p a {
+    font-family: Tahoma;
+    font-size: 1.1rem;
+    color: #000;
+    text-decoration: none;
+}
+
+#green-solutions > div p span {
+    font-family: Tahoma;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+#case-studies > div {
+    padding-top: 17px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#case-studies > div div {
+    max-width: 75%;
+}
+
+#case-studies > div div h5 {
+    font-family: MyriadPro;
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: #606060;
+}
+
+#case-studies > div div h5 span {
+    font-family: MyriadPro;
+    font-weight: 300;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+#case-studies > div div h5 span span {
+    font-family: MyriadProBold;
+    font-weight: bold;
+}
+
+#case-studies > div div a {
+    font-family: Tahoma;
+    font-size: 1.0rem;
+    color: #848484;
+    line-height: 14px;
+}
+
+#case-studies p {
+    margin-top: 16px;
+    font-family: Tahoma;
+    font-size: 1.1rem;
+    color: #848484;
+}
+
+#case-studies p a {
+    font-family: Tahoma;
+    font-size: 1.1rem;
+    color: #000;
+    text-decoration: none;
 }
 
 footer {
