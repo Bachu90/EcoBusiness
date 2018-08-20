@@ -1,3 +1,38 @@
+@font-face {
+    font-family: Tahoma;
+    src: url("../fonts/tahoma.ttf");
+}
+
+@font-face {
+    font-family: DINEngschrift;
+    src: url("../fonts/DINEngschriftStd.otf");
+}
+
+@font-face {
+    font-family: MyriadProBoldCondensed;
+    src: url("../fonts/MyriadPro-BoldCond.otf");
+}
+
+@font-face {
+    font-family: MyriadPro;
+    src: url("../fonts/MyriadPro-Regular.otf");
+}
+
+@font-face {
+    font-family: MyriadProLight;
+    src: url("../fonts/MyriadPro-Light.otf");
+}
+
+@font-face {
+    font-family: MyriadProBold;
+    src: url("../fonts/MyriadPro-Bold.otf");
+}
+
+@font-face {
+    font-family: MyriadProCondensed;
+    src: url("../fonts/MyriadPro-Cond.otf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -65,14 +100,69 @@ header nav {
     flex-basis: 395px;
 }
 
+header nav ul {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+    height: 40px;
+    border-right: 1px solid #181714;
+    box-shadow: 1px 0px 0px #484641;
+}
+
+header nav ul li:last-child {
+    border: none;
+    box-shadow: none;
+}
+
+header nav ul li a {
+    font-family: MyriadProBoldCondensed;
+    font-size: 1.6rem;
+    color: #e9eef2;
+    text-decoration: none;
+
+}
+
+header nav ul li a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #565553;
+    position: relative;
+    top: 23px;
+}
+
 .banner {
     display: flex;
     background: url(../img/grass.png) left bottom no-repeat;
 }
 
+.banner-left {
+    width: 438px;
+    background: url(../img/globe.png) left top no-repeat
+}
+
+.banner-left img {
+    position: relative;
+    bottom: -5px;
+}
+
 .banner-right {
     width: 100%;
     background: url(../img/banner-bg.png) repeat;
+}
+
+hgroup {
+    position: relative;
+    top: 83px;
+    left: -40px;
 }
 
 h1 {
@@ -112,7 +202,9 @@ h2 {
 }
 
 button {
-    display: block;
+    position: relative;
+    top: 100px;
+    left: 20px;
     width: 140px;
     height: 35px;
     border: none;
@@ -122,7 +214,6 @@ button {
     font-size: 2rem;
     color: #e7eada;
 }
-
 
 .button-arrow {
     display: inline-block;
@@ -147,6 +238,9 @@ section {
     background-color: #fff;
     position: relative;
     top: -60px;
+    margin-left: 49px;
+    margin-right: 49px;
+    border-radius: 8px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 33px;
@@ -243,6 +337,7 @@ section {
 #services-overview > div {
     display: flex;
     padding-top: 12px;
+    justify-content: space-between;
 }
 
 #services-overview > div div ul {
@@ -395,4 +490,10 @@ footer p {
     font-size: 1.1rem;
     color: #848484;
     text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        background-color: red;
+    }
 }
