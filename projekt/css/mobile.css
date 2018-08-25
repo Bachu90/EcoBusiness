@@ -12,12 +12,17 @@
         width: 200px;
         position: absolute;
         top: 65px;
-        right: 0px;
+        right: -200px;
         background-color: rgba(0, 0, 0, 0.7);
         list-style-type: none;
         padding: 10px 0;
         z-index: 100;
         border-radius: 5px 0 0 5px;
+        transition: right 0.3s ease-in-out;
+    }
+
+    header nav ul.active {
+        right: 0px;
     }
 
     header nav ul li {
@@ -37,48 +42,67 @@
 
     }
 
+    /* Hamburger button */
     .hamburger {
-        display: block;
+        padding: 0;
+        margin: 0;
         width: 40px;
-        height: 29px;
+        height: 35px;
+        border-style: none;
+        background: none;
+        position: fixed;
+        top: 14px;
+        right: 40px;
+        z-index: 2;
+        border-top: 5px solid #fff;
+        transition: all 0.3s ease;
+        outline: none;
+        border-radius: 0px;
+    }
+
+
+    .hamburger.active {
+        transform: rotate(-45deg);
+        transform-origin: right;
     }
 
     .hamburger:hover {
         cursor: pointer;
     }
 
-    .hamburger span {
-        display: block;
-        width: 40px;
-        height: 5px;
-        background-color: #e9eef2;
-        border: none;
-        border-radius: 2px;
-        position: relative;
-        top: 12px;
-    }
-
-    .hamburger span::before {
+    .hamburger::before {
         content: "";
         display: block;
-        width: 40px;
+        width: 100%;
         height: 5px;
-        background-color: #e9eef2;
-        border-radius: 2px;
-        position: relative;
-        top: -12px;
+        background-color: #fff;
+        position: absolute;
+        top: 10px;
+        border-radius: 0px;
+
     }
 
-    .hamburger span::after {
+    .hamburger.active::before {
+        opacity: 0;
+    }
+
+    .hamburger::after {
         content: "";
         display: block;
-        width: 40px;
+        width: 100%;
         height: 5px;
-        background-color: #e9eef2;
-        border-radius: 2px;
-        position: relative;
-        top: 7px;
+        background-color: #fff;
+        position: absolute;
+        top: 25px;
+        transition: all 0.3s ease;
+        border-radius: 0px;
     }
+
+    .hamburger.active::after {
+        transform: rotate(90deg) translate(-10px, 19px);
+        transform-origin: right;
+    }
+
 
     .banner {
         flex-direction: column-reverse;

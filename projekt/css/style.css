@@ -6,6 +6,7 @@
 
 body {
     font-family: Tahoma;
+    overflow-x: hidden;
 }
 
 .green {
@@ -16,6 +17,7 @@ body {
     max-width: 775px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 header {
@@ -31,6 +33,12 @@ header {
     border-bottom: 1px solid #181714;
     box-shadow: 0px 1px 0px #484641;
 }
+
+/*.top-bar.sticky {
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+}*/
 
 .brand-logo {
     flex-basis: 181px;
